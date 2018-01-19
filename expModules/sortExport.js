@@ -15,21 +15,27 @@ data points to the module's data list, and outputs the sorted list.*/
 var list = [];
 
 
-function ascending(){
-  this.addListlist.sort(function(a, b) {
-    if (a < b) {
-     return a - b;
-    };
-  });
-}
 
 //module exports
 module.exports = {
   addList:  function(number){
                             // var list [];
               // return function() {
-                list.push(number)
-                return list;
+              list.push(number)
+
+              return list;
               // }
+            },
+  sortAsc:  function() {
+              return ascending(list);
             }
+}
+
+
+function ascending(list){
+  return list.sort(function(a, b) {
+    // if (a < b) {
+     return a - b;
+    // };
+  });
 }
